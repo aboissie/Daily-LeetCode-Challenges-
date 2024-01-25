@@ -1,13 +1,14 @@
 class Solution(object):
+    def __init__(self):
+        self.mp = {1: 1, 2: 2}
+
     def climbStairs(self, n):
         """
         :type n: int
         :rtype: int
         """
-        x, y = 1, 2
-        if n == 1: return x
-        if n == 2: return y
-        for n in range(3, n + 1):
-            x, y = y, x + y
-        return y
+        if n in self.mp:
+            return self.mp[n]
         
+        self.mp[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
+        return self.mp[n]
