@@ -1,0 +1,16 @@
+cd 'LeetCode Strategies\my-website\docs'
+
+declare -a dataStructures=("Arrays" "HashMap & HashSets" "Stacks & Queues" "Linked List" "Trees" "Tries" "Heap & PriorityQueue" "Graphs")
+declare -a dataMethods=("Hashing" "Two Pointers" "Sliding Window" "Binary Search" "BackTracking" "Graph Algorithms I" "Graph Algorithms II" "1D-DP" "2D-DP" "Greedy")
+
+for item in "${dataStructures[@]}"; 
+do
+   echo "Creating Page for : $item at : LeetCode Strategies/my-website/docs/Data Structures/$item.md"
+   echo "# $item" > "Data Structures/$item.md"
+done
+
+for item in "${dataMethods[@]}"; 
+do
+   echo "Creating Page for : $item at : LeetCode Strategies/my-website/docs/Algorithms/$item.md"
+   echo "# $item" > "Algorithms/$item.md"
+done
