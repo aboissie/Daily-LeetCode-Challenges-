@@ -10,4 +10,4 @@ class Solution(object):
         for n in range(3, n + 1):
             x, y = y, x + y
         return y
-        
+    
