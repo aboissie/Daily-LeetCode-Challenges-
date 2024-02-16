@@ -14,6 +14,7 @@ public:
             sort(tmp.begin(), tmp.end());
             res[tmp].push_back(s);
         }
+        
         for(const auto& [_, item]: res) result.push_back(item);
     
         return result;

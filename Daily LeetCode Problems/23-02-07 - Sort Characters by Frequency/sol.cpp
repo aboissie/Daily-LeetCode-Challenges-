@@ -7,8 +7,8 @@ class Solution {
 public:
     string frequencySort(string s) {
         int* countFreqs = new int[26];
-        for(auto& k:s) countFreqs[k - 'a']++;
-        cout << countFreqs[0] << endl;
+        for(const char k:s) countFreqs[k - 'a']++;
+        
         return "hello";
     }
 };
