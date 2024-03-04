@@ -1,5 +1,3 @@
-Code Sample (Runtime: 34ms)
-
 class Solution:
     def rangeBitwiseAnd(self, left: int, right: int) -> int:
         a = 0
