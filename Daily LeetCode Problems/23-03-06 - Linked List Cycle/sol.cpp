@@ -7,12 +7,12 @@ struct ListNode {
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        ListNode* hare = *head;
-        ListNode* tortoise = *head;
-        while(hare.next!=nullptr && (*hare.next).next!=nullptr){
-            hare = *(*hare.next).next;
-            tortoise = *(tortoise.next);
-            if(&hare == &tortoise) return true;
+        ListNode* hare = head;
+        ListNode* tortoise = head;
+        while(hare!=NULL && hare->next!=NULL){
+            hare = hare->next->next;
+            tortoise = tortoise->next;
+            if(tortoise == hare) return true;
         }
         return false;
     }

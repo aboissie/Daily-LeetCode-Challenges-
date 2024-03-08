@@ -6,26 +6,22 @@ class ListNode:
         self.next = next
 
 class Solution:
-    @staticmethod
-    def LinkedListLength(head: Optional[ListNode])->int:
-        dummy = ListNode(0, next = head)
-        curr = dummy.next 
-        length = 0
-        while(curr != None): length, curr = length + 1, curr.next
-        return length
-
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        dummy = ListNode(0, next = head)
-        curr = dummy.next 
-        
-        currentNode = 0
-        length = Solution().LinkedListLength(head)
+        dummy = ListNode(0)
+        dummy.next = head
+        first = dummy
+        second = dummy
 
-        while(length - currentNode < n):
-            curr = curr.next 
-            
-        curr = curr.next
-        return dummy.next 
+        for _ in range(n + 1):
+            first = first.next
+
+        while first is not None:
+            first = first.next
+            second = second.next
+
+        second.next = second.next.next
+
+        return dummy.next
 
 if __name__ == "__main__":
     ln = ListNode(0)

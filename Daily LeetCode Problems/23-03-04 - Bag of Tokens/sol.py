@@ -12,10 +12,6 @@ class Solution:
             score += 1
             sortedTokens.pop(0)
 
-        print(sortedTokens)
-        print(score)
-
-
         return max(score, self.bagOfTokensScore(sortedTokens[:-1], power + (sortedTokens[-1] if sortedTokens else 0), score - 1) if score >= 1 else 0)
             
 if __name__ == "__main__":

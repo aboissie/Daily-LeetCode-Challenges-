@@ -7,4 +7,10 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        
+        tortoise, hare = head, head 
+        while(hare.next and hare.next.next):
+            hare = hare.next.next 
+            tortoise = tortoise.next 
+            if(hare == tortoise): return True 
+
+        return False 
